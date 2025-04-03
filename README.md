@@ -3,6 +3,7 @@
 
 1. The submit button is **disabled** by default.
 ![Task List](image.png)
+
 2. When the user types in the input field, the button is **enabled**.
 3. When the form is submitted:
     - The task is **retrieved**.
