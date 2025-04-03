@@ -9,5 +9,5 @@
     - The task is **added** to the list.
     - The input field is **cleared** & the button is **disabled** again.
 
-![Task List](Capture.3.png)
+![Task List](Capture.3.PNG)
 
