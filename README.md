@@ -1,6 +1,6 @@
 # IAP_Assignment
 ## How It Works
-
+![Task List](image.png)
 1. The submit button is **disabled** by default.
 ![Task List](image.png)
 
