@@ -17,7 +17,7 @@ document.getElementById("taskForm").addEventListener("submit", (e) => {
     
     // Number the task based on the current list length
     const taskNumber = taskList.children.length + 1;
-    task.textContent = `${taskNumber}. ${newTask.value.trim()}`;
+    task.textContent = `${newTask.value.trim()}`;
 
     // Append task to the list
     taskList.append(task);
