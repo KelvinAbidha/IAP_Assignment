@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Study Log{% endblock %}
+{% block content %}
+  <div class="form-container">
+    <h2>Log Study Hours</h2>
+    <form method="post">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="id_goal">Study Goal</label>
+        {{ form.goal }}
+      </div>
+      <div class="form-group">
+        <label for="id_date">Date</label>
+        {{ form.date }}
+      </div>
+      <div class="form-group">
+        <label for="id_hours_spent">Hours Spent</label>
+        {{ form.hours_spent }}
+      </div>
+      <button type="submit">Submit Log</button>
+    </form>
+  </div>
+{% endblock %}

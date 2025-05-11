@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" class="light-theme">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Study Tracker{% endblock %}</title>
+  <link rel="stylesheet" href="/static/css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>📚 Study Tracker</h1>
+    <div class="theme-toggle">
+      <button onclick="toggleTheme()">🌙 / 🌞</button>
+    </div>
+    <nav>
+      <a href="/">Dashboard</a>
+      <a href="/add_goal/">Add Goal</a>
+      <a href="/add_log/">Add Log</a>
+      <form method="post" action="{% url 'logout' %}" style="display: inline;">
+  {% csrf_token %}
+  <button type="submit" class="logout-button">Logout</button>
+</form>
+
+    </nav>
+  </header>
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+  <script src="/static/js/theme.js"></script>
+  {% block extra_scripts %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+  <h2>Welcome, {{ user.username }}!</h2>
+  <div class="cards">
+    {% for goal in goals %}
+      <div class="card">
+        <h3>{{ goal.title }}</h3>
+        <p>{{ goal.description }}</p>
+        <p><strong>Target:</strong> {{ goal.target_hours }} hrs</p>
+        <p><strong>Deadline:</strong> {{ goal.deadline }}</p>
+        {% if goal.reminder_time %}
+          <p><strong>Reminder:</strong> {{ goal.reminder_time }}</p>
+        {% endif %}
+      </div>
+    {% empty %}
+      <p>No goals yet. <a href="/add_goal/">Add one</a></p>
+    {% endfor %}
+  </div>
+  <canvas id="progressChart"></canvas>
+{% endblock %}
+{% block extra_scripts %}
+  <script src="/static/js/chart.js"></script>
+{% endblock %}
