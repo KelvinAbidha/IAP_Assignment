@@ -226,3 +226,19 @@ body.dark-theme .instructions-box {
 body.dark-theme .help-box {
   background-color: rgba(30, 144, 255, 0.1);
 }
+
+/* === Mobile Responsive Styles === */
+@media (max-width: 768px) {
+  button {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .switch-auth a:hover {
+    text-decoration: none; /* Simplify hover effects for mobile */
+  }
+
+  .logout-button {
+    font-size: 0.9rem; /* Adjust size for better usability on smaller screens */
+  }
+}
